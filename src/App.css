@@ -8,7 +8,6 @@ body {
   text-align: center;
 }
 
-/* Estilo para o cabeçalho */
 .Header {
   background-color: #4caf50;
   padding: 20px;
@@ -17,34 +16,23 @@ body {
   font-size: 24px;
 }
 
-/* Estilo geral para os componentes de lista */
 .ListContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Estilo para o formulário de adição de pet */
-.add-pet-form {
-  margin-top: 20px;
-  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 20px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para os cartões de pet */
 .PetCard {
   margin: 10px;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   max-width: 300px;
 }
 
-/* Estilo para os botões comuns */
 .button {
   background-color: #4caf50;
   color: white;
@@ -54,9 +42,4 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
-}
-
-/* Estilo para o botão de adicionar pet */
-.add-button {
-  background-color: #2196f3;
 }
