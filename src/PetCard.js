@@ -31,11 +31,11 @@ function PetCard({ pet, setPets }) {
 
   return (
     <div>
-      <h2>{editing ? 'Editar Pet' : pet.name}</h2>
+      <h2>{editing ? 'Edit Pet' : pet.name}</h2>
       {editing ? (
         <>
           <label>
-            Nome:
+            Name:
             <input
               type="text"
               name="name"
@@ -44,7 +44,7 @@ function PetCard({ pet, setPets }) {
             />
           </label>
           <label>
-            Raça:
+            Breed:
             <input
               type="text"
               name="breed"
@@ -52,14 +52,14 @@ function PetCard({ pet, setPets }) {
               onChange={handleChange}
             />
           </label>
-          <button onClick={handleSave}>Salvar</button>
-          <button onClick={handleCancel}>Cancelar</button>
+          <button onClick={handleSave}>Save</button>
+          <button onClick={handleCancel}>Cancel</button>
         </>
       ) : (
         <>
-          <p>Raça: {pet.breed}</p>
-          <button onClick={handleEdit}>Editar</button>
-          <button onClick={handleDelete}>Excluir</button>
+          <p>Breed: {pet.breed}</p>
+          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleDelete}>Delete</button>
         </>
       )}
     </div>
