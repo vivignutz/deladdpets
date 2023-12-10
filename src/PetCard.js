@@ -30,7 +30,7 @@ function PetCard({ pet, setPets }) {
   };
 
   return (
-    <div>
+    <div className="pet-card">
       <h2>{editing ? 'Edit Pet' : pet.name}</h2>
       {editing ? (
         <>
@@ -58,8 +58,10 @@ function PetCard({ pet, setPets }) {
       ) : (
         <>
           <p>Breed: {pet.breed}</p>
-          <button onClick={handleEdit}>Edit</button>
-          <button onClick={handleDelete}>Delete</button>
+          <div className="button-group">
+            <button className="edit-button" onClick={handleEdit}>Edit</button>
+            <button className='delete-button' onClick={handleDelete}>Delete</button>
+          </div>
         </>
       )}
     </div>
