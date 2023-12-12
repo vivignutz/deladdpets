@@ -1,6 +1,31 @@
-/* src/PetList.css */
-.add-pet-form {
+/* .add-pet-form {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
   }
+ */
+
+ /* src/PetList.css */
+.pet-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.add-pet-form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%; /* Ensure the form takes full width */
+}
+/* src/PetList.css */
+.pet-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Ajuste a margem conforme necessário */
+}

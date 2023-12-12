@@ -1,16 +1,14 @@
-// src/PetList.js
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import PetCard from './PetCard';
-import './PetList.css'; // Importa o arquivo de estilo
-
+import './PetList.css'; 
 function PetList({ pets, setPets }) {
   const [newPet, setNewPet] = useState({ name: '', breed: '' });
-  const [showForm, setShowForm] = useState(false); // Adiciona um estado para controlar a exibição do formulário
+  const [showForm, setShowForm] = useState(false); 
 
   const handleAddPet = () => {
     setPets((prevPets) => [...prevPets, { ...newPet, id: Date.now() }]);
     setNewPet({ name: '', breed: '' });
-    setShowForm(false); // Fecha o formulário após adicionar um novo pet
+    setShowForm(false);
   };
 
   const handleChange = (e) => {
@@ -18,7 +16,6 @@ function PetList({ pets, setPets }) {
     setNewPet((prevPet) => ({ ...prevPet, [name]: value }));
   };
 
-  // Adicione showForm como dependência da função principal do componente
   return (
     <div>
       {pets.map((pet) => (
@@ -26,9 +23,9 @@ function PetList({ pets, setPets }) {
       ))}
       {showForm && (
         <div className="add-pet-form">
-          <h2>Adicionar Novo Pet</h2>
+          <h2>Add a new pet</h2>
           <label>
-            Nome:
+            Name:
             <input
               type="text"
               name="name"
@@ -37,7 +34,7 @@ function PetList({ pets, setPets }) {
             />
           </label>
           <label>
-            Raça:
+            Breed:
             <input
               type="text"
               name="breed"
@@ -45,10 +42,79 @@ function PetList({ pets, setPets }) {
               onChange={handleChange}
             />
           </label>
-          <button onClick={handleAddPet}>Adicionar</button>
+          <button onClick={handleAddPet}>Add</button>
         </div>
       )}
-      <button onClick={() => setShowForm(!showForm)}>Adicionar Pet</button>
+      <button onClick={() => setShowForm(!showForm)}>Add Pet</button>
+    </div>
+  );
+}
+
+export default PetList;
+ */
+
+// src/PetList.js
+import React, { useState } from 'react';
+import PetCard from './PetCard';
+import './PetList.css';
+
+function PetList({ pets, setPets }) {
+  const [newPet, setNewPet] = useState({ name: '', breed: '' });
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAddPet = () => {
+    setPets((prevPets) => [...prevPets, { ...newPet, id: Date.now() }]);
+    setNewPet({ name: '', breed: '' });
+    setShowForm(false);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewPet((prevPet) => ({ ...prevPet, [name]: value }));
+  };
+
+  const renderPetCards = () => {
+    const petRows = [];
+    for (let i = 0; i < pets.length; i += 2) {
+      const petRow = (
+        <div className="pet-card-row" key={i}>
+          <PetCard pet={pets[i]} setPets={setPets} />
+          {i + 1 < pets.length && <PetCard pet={pets[i + 1]} setPets={setPets} />}
+        </div>
+      );
+      petRows.push(petRow);
+    }
+    return petRows;
+  };
+
+  return (
+    <div className="pet-list-container">
+      {renderPetCards()}
+      {showForm && (
+        <div className="add-pet-form">
+          <h2>Add a new pet</h2>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={newPet.name}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Breed:
+            <input
+              type="text"
+              name="breed"
+              value={newPet.breed}
+              onChange={handleChange}
+            />
+          </label>
+          <button onClick={handleAddPet}>Add</button>
+        </div>
+      )}
+      <button onClick={() => setShowForm(!showForm)}>Add Pet</button>
     </div>
   );
 }
