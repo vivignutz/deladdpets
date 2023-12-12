@@ -11,6 +11,7 @@ function PetList({ pets, setPets }) {
     setPets((prevPets) => [...prevPets, { ...newPet, id: Date.now() }]);
     setNewPet({ name: '', breed: '' });
     setShowForm(false);
+    setShowForm(false);
   };
 
   const handleChange = (e) => {

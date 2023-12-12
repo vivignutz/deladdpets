@@ -36,6 +36,7 @@ function PetCard({ pet, setPets }) {
         <>
           <label>
             Name:
+            Name:
             <input
               type="text"
               name="name"
@@ -45,6 +46,7 @@ function PetCard({ pet, setPets }) {
           </label>
           <label>
             Breed:
+            Breed:
             <input
               type="text"
               name="breed"
@@ -52,6 +54,8 @@ function PetCard({ pet, setPets }) {
               onChange={handleChange}
             />
           </label>
+          <button onClick={handleSave}>Save</button>
+          <button onClick={handleCancel}>Cancel</button>
           <button onClick={handleSave}>Save</button>
           <button onClick={handleCancel}>Cancel</button>
         </>

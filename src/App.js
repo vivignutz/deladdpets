@@ -15,7 +15,8 @@ function App() {
     <div className="App">
       <Header />
       <PetList pets={pets} setPets={setPets} />
-    </div>
+      <Footer />
+    </>
   );
 }
 
