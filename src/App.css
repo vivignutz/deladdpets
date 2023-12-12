@@ -9,6 +9,7 @@ body {
 }
 
 .Header {
+  position: static;
   background-color: #4caf50;
   padding: 20px;
   text-align: center;
@@ -42,4 +43,27 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
+}
+
+.form-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.footer-container {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-links a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
 }
