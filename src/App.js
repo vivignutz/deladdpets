@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import PetList from './PetList';
 import Header from './Header';
@@ -15,8 +14,9 @@ function App() {
     <div className="App">
       <Header />
       <PetList pets={pets} setPets={setPets} />
-      <Footer />
-    </>
+      {/* Aqui está faltando o componente Footer. Certifique-se de importá-lo e defini-lo */}
+      {/* <Footer /> */}
+    </div>
   );
 }
 
