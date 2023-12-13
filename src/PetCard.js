@@ -1,4 +1,3 @@
-// src/PetCard.js
 import React, { useState } from 'react';
 
 function PetCard({ pet, setPets }) {

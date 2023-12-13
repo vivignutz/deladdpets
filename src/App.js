@@ -6,9 +6,9 @@ import './App.css';
 
 function App() {
   const [pets, setPets] = useState([
-    { id: 1, name: 'Racoon', breed: 'Breed 1' },
-    { id: 2, name: 'Cat', breed: 'Breed 2' },
-    { id: 3, name: 'Dog', breed: 'Breed 3' },
+    { id: 1, name: 'Racoon', breed: 'Crab-eating' },
+    { id: 2, name: 'Cat', breed: 'Siamese' },
+    { id: 3, name: 'Dog', breed: 'French Bulldog' },
   ]);
 
   return (
