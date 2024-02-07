@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Racoon",
+      "breed": "Crab-eating"
+    },
+    {
+      "id": 2,
+      "name": "Cat",
+      "breed": "Siamese"
+    },
+    {
+      "id": 3,
+      "name": "Dog",
+      "breed": "French Bulldog"
+    }
+  ]
+  
